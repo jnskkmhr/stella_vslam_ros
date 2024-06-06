@@ -1,0 +1,2 @@
+colcon build --parallel-workers ${NUM_THREADS} --cmake-args \
+    -DUSE_STACK_TRACE_LOGGER=ON
