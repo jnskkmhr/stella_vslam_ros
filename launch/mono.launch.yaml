@@ -4,7 +4,7 @@ launch:
       default: $(find-pkg-share stella_vslam_ros)/vocabulary/orb_vocab.fbow
   - arg:
       name: "config"
-      default: $(find-pkg-share stella_vslam_ros)/config/stereo/D435i.yaml
+      default: $(find-pkg-share stella_vslam_ros)/config/mono/D435i.yaml
   - arg:
       name: "map_out"
       default: "map.msg"
@@ -27,8 +27,8 @@ launch:
           from: "$(find-pkg-share stella_vslam_ros)/config/param.yaml"
       remap:
       -
-          from: "/camera/left/image_raw"
+          from: "/camera/image_raw"
           to: "/$(var camera_name)/infra1/image_rect_raw"
-      -
-          from: "/camera/right/image_raw"
-          to: "/$(var camera_name)/infra2/image_rect_raw"
+      # -
+      #     from: "/camera/right/image_raw"
+      #     to: "/$(var camera_name)/infra2/image_rect_raw"
