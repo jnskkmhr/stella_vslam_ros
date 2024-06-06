@@ -263,4 +263,22 @@ install(TARGETS
   RUNTIME DESTINATION bin
 )
 
+# Install config files
+install(DIRECTORY
+  config
+  DESTINATION share/${PROJECT_NAME}/
+)
+
+# Install vocab files
+install(DIRECTORY
+  vocabulary
+  DESTINATION share/${PROJECT_NAME}/
+)
+
+# Install launch files.
+install(DIRECTORY
+  launch
+  DESTINATION share/${PROJECT_NAME}/
+)
+
 ament_package()

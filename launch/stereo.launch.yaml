@@ -1,0 +1,38 @@
+
+launch:
+  - arg:
+      name: "vocab"
+      default: $(find-pkg-share stella_vslam_ros)/vocabulary/orb_vocab.fbow
+  - arg:
+      name: "config"
+      default: $(find-pkg-share stella_vslam_ros)/config/stereo/D435i.yaml
+  - arg:
+      name: "map_out"
+      default: ""
+  - arg:
+      name: "map_in"
+      default: ""iridescence_viewer, pangolin_viewer, socket_publisher
+  - arg:
+      name: "rectify"
+      default: "false"
+  - arg:
+      name: "camera_name"
+      default: "camera"
+  - arg:
+      name: "viewer"
+      default: "none" #[iridescence_viewer, pangolin_viewer, socket_publisher]
+  - node:
+      pkg: "stella_vslam_ros"
+      exec: "run_slam"
+      name: "stella_vslam"
+      args: -v $(var vocab) -c $(var config) -i $(var map_in) -o $(var map_out) -r $(var rectify) viewer $(viewer)
+      param:
+        - 
+          from: "$(find-pkg-share orbslam3)/config/param.yaml"
+      remap:
+      -
+          from: "/camera/left/image_raw"
+          to: "/$(var camera_name)/camera/infra1/image_rect_raw"
+      -
+          from: "/camera/right/image_raw"
+          to: "/$(var camera_name)/camera/infra2/image_rect_raw"
