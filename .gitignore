@@ -4,7 +4,6 @@ cmake-build-release/
 */.python-version
 *.user
 *.bag
-*.fbow
 
 # Prerequisites
 *.d
@@ -38,3 +37,5 @@ cmake-build-release/
 *.exe
 *.out
 *.app
+
+vocabulary/orb_vocab.fbow

@@ -4,7 +4,7 @@ launch:
       default: $(find-pkg-share stella_vslam_ros)/vocabulary/orb_vocab.fbow
   - arg:
       name: "config"
-      default: $(find-pkg-share stella_vslam_ros)/config/stereo/D435i.yaml
+      default: $(find-pkg-share stella_vslam_ros)/config/stereo/D455.yaml
   - arg:
       name: "map_out"
       default: "map.msg"
@@ -16,7 +16,7 @@ launch:
       default: "d455"
   - arg:
       name: "viewer"
-      default: "none" #[iridescence_viewer, pangolin_viewer, socket_publisher]
+      default: "pangolin_viewer" #[iridescence_viewer, pangolin_viewer, socket_publisher]
   - node:
       pkg: "stella_vslam_ros"
       exec: "run_slam"
@@ -28,7 +28,7 @@ launch:
       remap:
       -
           from: "/camera/left/image_raw"
-          to: "/$(var camera_name)/infra1/image_rect_raw"
+          to: "/$(var camera_name)/$(var camera_name)/infra1/image_rect_raw"
       -
           from: "/camera/right/image_raw"
-          to: "/$(var camera_name)/infra2/image_rect_raw"
+          to: "/$(var camera_name)/$(var camera_name)/infra2/image_rect_raw"

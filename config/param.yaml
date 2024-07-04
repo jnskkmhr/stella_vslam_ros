@@ -1,6 +1,6 @@
 stella_vslam:
   ros__parameters:
-    map_frame: map
+    map_frame: map_vslam
     odom_frame: odom_frame
     robot_base_frame: base_link
     camera_frame: d455_link

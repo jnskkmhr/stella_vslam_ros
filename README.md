@@ -10,6 +10,12 @@ See [here](https://stella-cv.readthedocs.io/en/latest/ros2_package.html).
 
 stella_vslam_ros uses submodules. Clone it with `git clone --recursive` or download submodules with `git submodule update --init --recursive`.
 
+Also please download orb feature. 
+```bash
+cd vocabulary
+curl -sL "https://github.com/stella-cv/FBoW_orb_vocab/raw/main/orb_vocab.fbow" -o orb_vocab.fbow
+```
+
 ## Subscribed topics
 
 ### monocular setup
