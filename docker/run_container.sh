@@ -1,5 +1,5 @@
 #!/bin/bash
-xhost +
+# xhost + # disable when oprating on robot
 IMAGE="openvslam-ros2-humble:latest"
 NAME="openvslam-ros2-humble-container"
 

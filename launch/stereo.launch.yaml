@@ -16,7 +16,7 @@ launch:
       default: "d455"
   - arg:
       name: "viewer"
-      default: "pangolin_viewer" #[iridescence_viewer, pangolin_viewer, socket_publisher]
+      default: "none" #[iridescence_viewer, pangolin_viewer, socket_publisher]
   - node:
       pkg: "stella_vslam_ros"
       exec: "run_slam"
