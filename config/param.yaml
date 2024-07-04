@@ -3,7 +3,7 @@ stella_vslam:
     map_frame: map_vslam
     odom_frame: odom_frame
     robot_base_frame: base_link
-    camera_frame: d455_link
+    camera_frame: camera
     publish_tf: true
     publish_keyframes: true
     use_exact_time: true # exact time SynchPolicy

@@ -158,5 +158,7 @@ RUN set -x && \
   apt-get autoremove -y -qq && \
   rm -rf /var/lib/apt/lists/*
 
+RUN apt-get update && apt-get install -y vim byobu
+
 WORKDIR /ros2_ws
 RUN echo "source /opt/ros/$ROS_DISTRO/setup.bash"    -DUSE_STACK_TRACE_LOGGER=ON
