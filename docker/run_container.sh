@@ -8,6 +8,7 @@ docker run --name $NAME -it --rm --privileged \
 -e DISPLAY \
 -e "PRIVACY_CONSENT=Y" \
 --net host \
+--ipc host \
 -v $HOME/.Xauthority:/root/.Xauthority \
 -v /dev/:/dev/ \
 -v $HOME/ros2_ws:/ros2_ws \
