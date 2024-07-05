@@ -2,7 +2,7 @@
 
 # intrinsic parameters after stereo-rectification are written
 Camera:
-  name: "D435i stereo"
+  name: "D455 stereo"
   setup: "stereo"
   model: "perspective"
 
@@ -28,7 +28,7 @@ Camera:
   fps: 30.0
   cols: 640
   rows: 480
-  focal_x_baseline: 0.094923 # in m
+  focal_x_baseline: 94.923 # in mm
   depth_threshold: 40
 
   color_order: "Gray"

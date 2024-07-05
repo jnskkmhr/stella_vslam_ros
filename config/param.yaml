@@ -1,9 +1,9 @@
 stella_vslam:
   ros__parameters:
-    map_frame: map_vslam
+    map_frame: map
     odom_frame: odom_frame
     robot_base_frame: base_link
-    camera_frame: camera
+    camera_frame: d455_infra1_frame
     publish_tf: true
     publish_keyframes: true
     use_exact_time: true # exact time SynchPolicy
